@@ -1,12 +1,12 @@
 import '../repositories/business_repository.dart';
 import '../entities/business_entity.dart';
 
-class AddBusiness {
+class UpdateBusiness {
   final BusinessRepository repository;
 
-  AddBusiness(this.repository);
+  UpdateBusiness(this.repository);
 
   Future<void> call(BusinessEntity business) {
-    return repository.addBusiness(business);
+    return repository.updateBusiness(business);
   }
 }
