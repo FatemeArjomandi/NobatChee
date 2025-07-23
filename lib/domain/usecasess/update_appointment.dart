@@ -1,12 +1,12 @@
 import '../entities/appointment_entity.dart';
 import '../repositories/appointment_repository.dart';
 
-class AddAppointment {
+class UpdateAppointment {
   final AppointmentRepository repository;
 
-  AddAppointment(this.repository);
+  UpdateAppointment(this.repository);
 
   Future<void> call(AppointmentEntity appointment) {
-    return repository.addAppointment(appointment);
+    return repository.updateAppointment(appointment);
   }
 }
