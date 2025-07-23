@@ -1,12 +1,13 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import '../models/business_model.dart';
+import '../../models/business_model.dart';
 
-class BusinessLocalDataSource {
-  static final BusinessLocalDataSource instance = BusinessLocalDataSource._internal();
+class BusinessLocalDataSourceImpl {
+  static final BusinessLocalDataSourceImpl instance =
+      BusinessLocalDataSourceImpl._internal();
   static Database? _db;
 
-  BusinessLocalDataSource._internal();
+  BusinessLocalDataSourceImpl._internal();
 
   Future<Database> get database async {
     if (_db != null) return _db!;
