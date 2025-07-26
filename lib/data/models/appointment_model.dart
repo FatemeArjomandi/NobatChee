@@ -9,23 +9,20 @@ class AppointmentModel extends AppointmentEntity {
     required super.time,
   });
 
-  factory AppointmentModel.fromMap(Map<String, dynamic> map) {
-    return AppointmentModel(
-      id: map['id'],
-      businessId: map['business_id'],
-      clientName: map['client_name'],
-      date: map['date'],
-      time: map['time'],
-    );
-  }
+  factory AppointmentModel.fromMap(Map<String, dynamic> map) =>
+      AppointmentModel(
+        id: map['id'],
+        businessId: map['business_id'],
+        clientName: map['client_name'],
+        date: map['date'],
+        time: map['time'],
+      );
 
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'business_id': businessId,
-      'client_name': clientName,
-      'date': date,
-      'time': time,
-    };
-  }
+  Map<String, dynamic> toMap() => {
+        'id': id,
+        'business_id': businessId,
+        'client_name': clientName,
+        'date': date,
+        'time': time,
+      };
 }
