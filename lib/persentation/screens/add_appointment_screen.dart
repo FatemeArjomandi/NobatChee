@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/appointment_entity.dart';
 import '../../data/repositories/appointment_repository_impl.dart';
-import '../../data/datasources/appointment_local_datasource.dart';
+import '../../data/datasources/local/appointment_local_datasource_impl.dart';
 import '../../domain/usecasess/add_appointment.dart';
 
 final addAppointmentProvider = Provider<AddAppointment>((ref) {
